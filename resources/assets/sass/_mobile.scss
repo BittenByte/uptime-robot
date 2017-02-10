@@ -1,0 +1,39 @@
+#nav-mobile {
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    @include tablet() {
+        display: none;
+    }
+
+    .nav-close {
+        @include delete();
+        position: absolute;
+        top: 9px;
+        right: 9px;
+        height: 30px;
+        width: 30px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+
+        li {
+            background: $primary;
+            padding: 5px;
+            margin-bottom: 10px;
+
+            a {
+                color: white;
+                font-size: 18px;
+            }
+        }
+    }
+}
