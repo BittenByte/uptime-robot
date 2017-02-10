@@ -6,29 +6,25 @@
     left: 0;
     height: 100%;
     width: 100%;
-
-    @include tablet() {
-        display: none;
-    }
-
+    
     .nav-close {
         @include delete();
         position: absolute;
-        top: 9px;
-        right: 9px;
-        height: 30px;
-        width: 30px;
+        top: 1rem;
+        right: 1rem;
+        height: 3.5rem;
+        width: 3.5rem;
     }
 
     ul {
         display: flex;
         flex-direction: column;
-        margin-top: 50px;
+        margin-top: 5rem;
 
         li {
             background: $primary;
-            padding: 5px;
-            margin-bottom: 10px;
+            padding: 2rem;
+            margin-bottom: 3rem;
 
             a {
                 color: white;

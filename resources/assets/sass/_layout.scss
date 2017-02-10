@@ -27,6 +27,10 @@ header {
     .nav {
         background-color: transparent;
         
+        .nav-toggle {
+            height: inherit;
+        }
+
         .is-main-logo {
             span {
                 margin-left: 5px;
@@ -75,7 +79,16 @@ footer {
 
 h1.title {
     @extend .is-primary-box;
-
     padding: 1em;
+    margin-bottom: none;
+
+    //remember: this rule is only applied to h2.subtitle if
+    //and only if it is preceded by h1.title 
+    +h2.subtitle {
+        border: 1px solid $primary;
+        margin-top: -2rem;
+        padding: 1rem 2rem;
+        border-radius: 4px;
+    }
 }
 

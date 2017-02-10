@@ -11,8 +11,14 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', function () {
+    return redirect()->route('admin.dashboard');
+});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin/', 'as' => 'admin.'], function () {
+    Route::get('/dashboard', [
+        'uses' => 'MonitorController@index',
+    ])->name('dashboard');
+});
